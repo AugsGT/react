@@ -5,8 +5,7 @@ function App() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
-  const API_URL = 'http://localhost:5000/api/items';
-
+const API_URL = `${import.meta.env.VITE_API_URL}/api/items`;
   // Fetch existing items from MongoDB Atlas when component loads
   useEffect(() => {
     fetch(API_URL)
